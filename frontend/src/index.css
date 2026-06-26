@@ -1,0 +1,31 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html, body, #root { height: 100%; width: 100%; overflow: hidden; }
+body {
+  font-family: 'Inter', -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  background: #0a0e27; color: #e4e6eb;
+}
+
+:root {
+  --bg-primary: #0a0e27; --bg-secondary: #131836; --bg-tertiary: #1a2042;
+  --bg-elevated: #1f2649; --border-color: #2a3158;
+  --text-primary: #e4e6eb; --text-secondary: #9ca3c4; --text-muted: #6b7299;
+  --accent-primary: #6366f1; --accent-secondary: #8b5cf6; --accent-tertiary: #ec4899;
+  --success: #10b981; --warning: #f59e0b; --danger: #ef4444;
+  --gradient-1: linear-gradient(135deg, #6366f1 0%, #8b5cf6 50%, #ec4899 100%);
+  --shadow-sm: 0 2px 8px rgba(0,0,0,0.2);
+  --shadow-md: 0 4px 16px rgba(0,0,0,0.3);
+  --shadow-lg: 0 8px 32px rgba(0,0,0,0.4);
+  --shadow-glow: 0 0 20px rgba(99,102,241,0.3);
+}
+
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--border-color); border-radius: 4px; }
+
+@keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes spin { to { transform: rotate(360deg); } }
+@keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.5; } }
+
+.animate-fade-in { animation: fadeIn 0.4s ease-out; }
+.spinning { animation: spin 1s linear infinite; }
